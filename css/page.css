@@ -63,3 +63,10 @@
     width: 190px;
     margin: 5px 20px 20px 0;
 }
+.request-tutor {
+    width: 90%;
+    margin: auto;
+}
+.request-tutor .btn-blue {
+    color: #011b3a;
+}
