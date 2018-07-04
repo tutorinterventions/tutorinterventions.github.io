@@ -58,6 +58,9 @@
     width: 100%;
     height: 100%;
 }
+.post h2, .post h3, .post h4 {
+    margin-bottom: 34px;
+}
 .post img {
     float: left;
     width: 190px;
