@@ -1,0 +1,49 @@
+.form-check {
+    min-width:25%;
+}
+.control-group {
+    width: 100%;
+}
+.form-check-label {
+    white-space: nowrap;
+}
+
+.group-outline {
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    padding: 9px 20px;
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+.group-label {
+    color: #535353;
+    display: block;
+    margin-bottom: 6px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+#contactForm .form-control::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #a7a7a7;
+    font-style: italic;
+ }  
+#contactForm .form-control:-moz-placeholder {  /* Mozilla Firefox 4 to 18 */
+    color: #a7a7a7;
+    font-style: italic;
+ }  
+#contactForm .form-control::-moz-placeholder {  /* Mozilla Firefox 19+ */
+    color: #a7a7a7;
+    font-style: italic;
+ }  
+#contactForm .form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #a7a7a7;
+    font-style: italic;
+ }  
+#contactForm .form-control::-ms-input-placeholder {  /* Microsoft Edge */
+    color: #a7a7a7;
+    font-style: italic;
+ }  
+#contactForm .form-control::placeholder { 
+    color: #a7a7a7;
+    font-style: italic;
+ }  
