@@ -63,9 +63,18 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
-    <style>
 
-    </style>
+<script>
+  (function() {
+    var cx = '013979487175649159810:5dmpygjru_a';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
 
 </head>
 
@@ -93,7 +102,9 @@
             <ul class="navbar-nav pull-right search">																		
                 <li class="nav-item">
                     <form class="form-inline search-form">
-                        <input class="form-control" placeholder="Search..." type="search">
+                        <div class="search-container">
+                        <gcse:searchbox-only></gcse:searchbox-only>
+                        </div>
                         <button class="btn-search" type="submit">
                         <i class="fa fa-search"></i>
                         </button>
@@ -104,7 +115,7 @@
     </nav>
     <nav class="navbar navbar-bottom">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/">
              <span class="hidden">Tutor Interventions</span>
                 <img src="/img/logo-blue.png">
             </a>

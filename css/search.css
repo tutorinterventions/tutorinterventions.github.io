@@ -15,12 +15,38 @@
     z-index: 999;
     cursor: pointer;
 }
+.search-form .cse .gsc-search-button-v2, .search-form .gsc-search-button-v2 {
+    display: none;
+}
+.search-form .gsc-input-box {
+    background: none;
+    border: none;
+}
+
+.search-form .gsc-search-box-tools .gsc-search-box .gsc-input {
+    background-color: transparent !important;
+}
+
+.search-form .gsc-search-box .gsc-input>input:focus,
+.search-form .gsc-input-box-focus {
+  border: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: none;
+}
+
+
+
+.btn-search:focus {
+    outline: none;
+}
 
 .btn-search i {
     color: rgba(255, 255, 255, 0.5);
 }
 
-.navbar-top .search input {
+.navbar-top .search .search-container {
     position: relative;
     float: right;
     background: transparent;
@@ -45,6 +71,7 @@
     cursor: text;
     background: rgba(255, 255, 255, 0.25);
     padding-right: 50px;
+    border-radius: 0;
 }
 
 .navbar-top .search input::-webkit-input-placeholder {
