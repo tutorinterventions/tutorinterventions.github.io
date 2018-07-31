@@ -29,12 +29,14 @@ $(function() {
             var message = $("textarea#message").val();
             var freq = $("input[name='frequency']:checked").val();
             var delivery = $("input[name='delivery']:checked").val();
+            var name =  fname + " " + lname;
       
             $.ajax({
                 url: "https://getsimpleform.com/messages/ajax?form_api_token=437c648741436f4156d4a081cbc1a2df",
                 dataType: "jsonp",
                 data: {
-                    "Name": fname + " " + lname,
+                    "Title": "Tutor Request from "+name+"  in "+location+" via tutorinterventions.co.uk",
+                    "Name": name,
                     "Subjects": subjects || "Not indicated",
                     "Location": location,
                     "Frequency": freq || "Not indicated",

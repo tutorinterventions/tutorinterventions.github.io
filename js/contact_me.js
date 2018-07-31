@@ -2,6 +2,8 @@
 // Contact Form Scripts
 $(function() {
 
+
+
     $("body").on("input propertychange", ".floating-label-form-group", function(e) {
         $(this).toggleClass("floating-label-form-group-with-value", !!$(e.target).val());
     }).on("focus", ".floating-label-form-group", function() {
@@ -22,19 +24,16 @@ $(function() {
             var email = $("input#email").val();
             var phone = $("input#phone").val();
             var message = $("textarea#message").val();
-            var firstName = name; // For Success/Failure Message
-            // Check for white space in name for Success/Fail message
-            if (firstName.indexOf(" ") >= 0) {
-                firstName = name.split(" ").slice(0, -1).join(" ");
-            }
+
             $.ajax({
-                url: "https://getsimpleform.com/messages/ajax?form_api_token=74603f5b7f9af3a58f61049a60b94ded",
+                url: "https://getsimpleform.com/messages/ajax?form_api_token=437c648741436f4156d4a081cbc1a2df",
                 dataType: "jsonp",
                 data: {
-                    name: name,
-                    phone: phone,
-                    email: email,
-                    message: message
+                    "Title": name+" sent you an enquiry via tutorinterventions.co.uk",
+                    "Name": name,
+                    "Phone": phone,
+                    "Email": email,
+                    "Details": message
                 },
                 cache: false,
                 success: function() {
