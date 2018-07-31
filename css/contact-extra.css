@@ -136,6 +136,15 @@ form {
     background: #db4437;
 }
 
+#success {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: white;
+
+}
+
 
 /**md and above**/
 @media (min-width: 992px) {

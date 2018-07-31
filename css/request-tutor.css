@@ -1,9 +1,11 @@
 .form-check {
-    min-width:25%;
+    min-width: 40%;
 }
+
 .control-group {
     width: 100%;
 }
+
 .form-check-label {
     white-space: nowrap;
 }
@@ -15,6 +17,7 @@
     margin-bottom: 30px;
     margin-top: 15px;
 }
+
 .group-label {
     color: #535353;
     display: block;
@@ -23,27 +26,61 @@
     font-weight: bold;
 }
 
-#contactForm .form-control::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+#contactForm .form-control::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
     color: #a7a7a7;
     font-style: italic;
- }  
-#contactForm .form-control:-moz-placeholder {  /* Mozilla Firefox 4 to 18 */
+    font-size: 16px;
+}
+
+#contactForm .form-control:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
     color: #a7a7a7;
     font-style: italic;
- }  
-#contactForm .form-control::-moz-placeholder {  /* Mozilla Firefox 19+ */
+}
+
+#contactForm .form-control::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
     color: #a7a7a7;
     font-style: italic;
- }  
-#contactForm .form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+}
+
+#contactForm .form-control:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
     color: #a7a7a7;
     font-style: italic;
- }  
-#contactForm .form-control::-ms-input-placeholder {  /* Microsoft Edge */
+}
+
+#contactForm .form-control::-ms-input-placeholder {
+    /* Microsoft Edge */
     color: #a7a7a7;
     font-style: italic;
- }  
-#contactForm .form-control::placeholder { 
+}
+
+#contactForm .form-control::placeholder {
     color: #a7a7a7;
     font-style: italic;
- }  
+}
+
+.floating-label-form-group input, .floating-label-form-group textarea {
+    margin-top: 8px;
+}
+.floating-label-form-group label {
+    white-space: nowrap;
+}
+
+.narrow-form {
+    max-width: 540px;
+}
+
+.form-check label {
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+
+@media (min-width: 768px) {
+    .narrow-form {
+        max-width: 720px;
+    }
+}

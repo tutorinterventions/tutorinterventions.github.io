@@ -2,6 +2,8 @@
 // Contact Form Scripts
 $(function() {
 
+
+
     $("body").on("input propertychange", ".floating-label-form-group", function(e) {
         $(this).toggleClass("floating-label-form-group-with-value", !!$(e.target).val());
     }).on("focus", ".floating-label-form-group", function() {
@@ -18,23 +20,28 @@ $(function() {
         submitSuccess: function($form, event) {
             event.preventDefault(); // prevent default submit behaviour
             // get values from FORM
-            var name = $("input#name").val();
+            var subjects = $("input#subjects").val();
+            var location = $("input#location").val();
+            var fname = $("input#first-name").val();
+            var lname = $("input#last-name").val();
             var email = $("input#email").val();
             var phone = $("input#phone").val();
             var message = $("textarea#message").val();
-            var firstName = name; // For Success/Failure Message
-            // Check for white space in name for Success/Fail message
-            if (firstName.indexOf(" ") >= 0) {
-                firstName = name.split(" ").slice(0, -1).join(" ");
-            }
+            var freq = $("input[name='frequency']:checked").val();
+            var delivery = $("input[name='delivery']:checked").val();
+      
             $.ajax({
-                url: "https://getsimpleform.com/messages/ajax?form_api_token=74603f5b7f9af3a58f61049a60b94ded",
+                url: "https://getsimpleform.com/messages/ajax?form_api_token=437c648741436f4156d4a081cbc1a2df",
                 dataType: "jsonp",
                 data: {
-                    name: name,
-                    phone: phone,
-                    email: email,
-                    message: message
+                    "Name": fname + " " + lname,
+                    "Subjects": subjects || "Not indicated",
+                    "Location": location,
+                    "Frequency": freq || "Not indicated",
+                    "Delivery": delivery || "Not indicated",
+                    "Details": message,
+                    "Phone": phone,
+                    "Email": email
                 },
                 cache: false,
                 success: function() {
