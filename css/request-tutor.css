@@ -1,3 +1,4 @@
+
 .form-check {
     min-width: 40%;
 }
@@ -17,7 +18,6 @@
     background: #fff;
     border: 1px solid #e6e6e6;
     padding: 9px 20px;
-    margin-bottom: 30px;
     margin-top: 15px;
 }
 
@@ -81,9 +81,28 @@
     font-size: 14px;
 }
 
+.request-popup {
+    position: fixed;
+    background: white;
+    top: 45px;
+    left: 50%;
+    width: 540px;
+    z-index: 999;
+    margin-left: -270px;
+    border: 1px solid #e6e6e6;
+    box-shadow: 5px 5px 4px 5px rgba(0,0,0,0.2);
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+
+}
+
 
 @media (min-width: 768px) {
     .narrow-form {
         max-width: 720px;
+    }
+    .request-popup {
+        width: 720px;
+        margin-left: -360px;
     }
 }

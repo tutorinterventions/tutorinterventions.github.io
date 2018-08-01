@@ -4,8 +4,8 @@
 .floating-label-form-group input, .floating-label-form-group textarea {
     background: #fff;
     border: 1px solid #e6e6e6;
-    padding: 9px 20px;
-    margin-bottom: 30px;
+    padding: 3px 20px;
+    margin-bottom: 15px;
     margin-top: 15px;
 }
 .form-group .form-control:focus {
@@ -14,7 +14,7 @@
 form {
     margin-bottom: 0;
 }
-.floating-label-form-group .help-block {
+.help-block {
     margin: 0;
     margin-top: -30px;
     margin-bottom: -30px;
@@ -149,6 +149,6 @@ form {
 /**md and above**/
 @media (min-width: 992px) {
     #contactForm {
-        margin-right: 5rem;
+        /* margin-right: 5rem; */
     }
   }

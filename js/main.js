@@ -18,5 +18,14 @@ $(function() {
         $('.search-form .search-container').removeClass('search-active');
      });  */
      
+     $("a[href='/request-tutor/']").click(function(ev){
+         ev.preventDefault();
+         $(".request-popup").removeClass("hidden");
+     });
+
+     $(".request-popup .form-header i").click(function(ev){
+        ev.preventDefault();
+        $(".request-popup").addClass("hidden");
+     })
 
 });
