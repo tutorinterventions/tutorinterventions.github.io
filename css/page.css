@@ -97,5 +97,9 @@ aside.post {
 }
 
 .gray {
-  background: #f8f8f8;
+  background: #f8f9fa;
+}
+
+.bulleted ul {
+  list-style: disc;
 }

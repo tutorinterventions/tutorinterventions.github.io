@@ -62,11 +62,20 @@
         function initMap() {
             map = new google.maps.Map(document.getElementById('map'), {
             center: {lat: 51.2802, lng: 1.0789},
-            zoom: 14
+            zoom: 14,
+            scrollwheel: false
+            });
+            google.maps.event.addListenerOnce(map, 'tilesloaded', function(){
+                 console.log("tiles loaded")
+                 $('.map-overlay').fadeOut(1000,function(){
+                     $(this).addClass("hidden");
+    
+                 })
             });
         }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWy2oV9Spdh3Mmq3qqMH2Sv2WLgJh8tlw&callback=initMap" async defer></script>
+
 
 <script>
   (function() {
@@ -123,7 +132,10 @@
              <span class="hidden">Tutor Interventions</span>
                 <img src="/img/logo-blue.png">
             </a>
-            <div class="collapse navbar-collapse">
+             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
                         <a class="nav-link" href="/">Home</a>
@@ -161,8 +173,10 @@
     </header>
         <div class="map-container">
         <div id="map" class="map" >
+        
             
         </div>
+         <div class="map-overlay"></div>
         <div class="map-contact">
         <ul class="contact-list">
             <li class="address">
@@ -453,6 +467,8 @@
             </div>
         </div> 
     </div>
+
+
 
     <script src="/vendor/jquery/jquery.min.js"></script>
     <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
