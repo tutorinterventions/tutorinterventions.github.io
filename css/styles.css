@@ -857,7 +857,8 @@ form {
 }
 
 .your-contact h4 {
-  margin-bottom: 0;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .your-contact ul {
@@ -865,6 +866,7 @@ form {
   overflow: hidden;
   white-space: nowrap;
   font-size: 0.9rem;
+  line-height: 1.8rem;
 }
 
 .your-contact li {
@@ -995,10 +997,10 @@ form {
 
 #success {
   position: absolute;
-  top: 0;
+  top: -50%;
   width: 100%;
   z-index: 999;
-  background-color: #fff;
+  background-color: transparent;
 }
 
 /**md and above**/
