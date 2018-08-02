@@ -75,7 +75,7 @@
 
 .navbar-top {
   font-size: 13px;
-  background-color: #284664;
+  background-color: #011b3a;
   padding: 0;
   min-height: 25px;
   margin: 0px auto;
@@ -83,7 +83,7 @@
 }
 
 .navbar-bottom {
-  background-color: #284664;
+  background-color: #011b3a;
 }
 
 @media (min-width: 768px) {

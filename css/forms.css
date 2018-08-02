@@ -78,7 +78,7 @@ form .form-group:first-child .floating-label-form-group {
 }
 
 .form-group .form-control:focus {
-  border-color: #284664;
+  border-color: #011b3a;
 }
 
 form {
@@ -117,7 +117,7 @@ form {
 .your-contact i {
   font-size: 25px;
   width: 2rem;
-  color: #284664;
+  color: #011b3a;
   font-weight: bold;
   text-align: center;
 }
@@ -173,12 +173,16 @@ form {
   padding-left: 40px;
 }
 
+.map-contact li {
+  margin-bottom: 15px;
+}
+
 .map-contact .contact-list > li > i,
 .map-contact .contact-list > li > a > i {
   font-size: 25px;
   width: 2rem;
   margin-left: -40px;
-  color: #284664;
+  color: #011b3a;
   font-weight: bold;
   text-align: center;
   padding-right: 5px;
