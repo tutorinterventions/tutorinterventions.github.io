@@ -521,6 +521,10 @@ aside.post {
   list-style: disc;
 }
 
+.img-wrapper img {
+  width: 100%;
+}
+
 /*home*/
 .btn {
   border-radius: 0;
