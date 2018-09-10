@@ -7,7 +7,7 @@
     <meta name="description" content="Private Tutoring In Leicester By A Tutor With 20 Years Experience">
     <meta name="keywords" content="private tutor,private tutoring,gcse maths tutor,gcse english tutor,Rachael Dyer,teaching,teacher,tutoring,tutor,education,schools,schooling,11+,special needs">
     <meta name="author" content="Rachael Dyer">
-    <meta property="og:title" content="Leicester Schools">
+    <meta property="og:title" content="Leicester Schools' Spend Per Pupil">
     <meta property="og:description" content="Private Tutoring In Leicester By A Tutor With 20 Years Experience">
     <meta property="og:image" content="/img/classmates-handsup-header.jpg">
     <meta property="og:url" content="https://www.tutorinterventions.co.uk/leicester-schools">
@@ -31,7 +31,7 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-    <title>Leicester Schools | Tutor Interventions</title>
+    <title>Leicester Schools' Spend Per Pupil | Tutor Interventions</title>
     <!-- Bootstrap core CSS -->
     <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -39,8 +39,9 @@
     <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i" rel="stylesheet">
-    <link href="/css/styles.min.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
 
+     <link href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.min.css" rel="stylesheet">
      <link href="/css/map-icons.css" rel="stylesheet">
  
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -58,34 +59,6 @@
 
   gtag('config', 'UA-123302569-1');
 </script>
-    <script>
-        window.ti = window.ti || {};
-
-                var mapConfig = {center: {lat: 52.6369,lng: -1.1398},zoom: 10}                
-        var centerLL =  {lat: 52.5694, lng: -1.1693};
-        var zoom = 14;
-        if(mapConfig) {
-            centerLL = mapConfig.center;
-            zoom = mapConfig.zoom;
-        }
-        function initMap() {
-            window.ti.map = new google.maps.Map(document.getElementById('map'), {
-            center: centerLL,
-            zoom: zoom,
-            scrollwheel: false
-            });
-            google.maps.event.addListenerOnce(map, 'tilesloaded', function(){
-                 $('.map-overlay').fadeOut(1000,function(){
-                    var marker = new google.maps.Marker({
-                        position: centerLL,
-                        map: map,
-                        animation: google.maps.Animation.DROP
-                    });
-                 })
-            });
-        }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFO-sbwaYY3QEZ5WtPmWg4XZVbOodk2U8&callback=initMap" async defer></script>
 
 
 <script>
@@ -103,7 +76,7 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-trans navbar-holder">
+  <nav id="main-nav" class="navbar navbar-expand-lg navbar-dark bg-trans navbar-holder">
    <nav class="navbar navbar-top">
         <div class="container">
             <ul class="navbar-nav pull-left contact">
@@ -145,7 +118,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
@@ -156,6 +129,12 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/contact/">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Articles</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/leicester-schools/">Leicester Schools' Spend Per Pupil</a>
+                        </div>
                     </li>
                 </ul>
 
@@ -171,10 +150,10 @@
             <div class="breadcrumbs">
                 <ul>
                     <li><a href="/">Tutor Interventions</a></li>
-                    <li><a href="/leicester-schools">Leicester Schools</a></li>
+                    <li><a href="/leicester-schools">Leicester Schools' Spend Per Pupil</a></li>
                 </ul>      
             </div>
-            <h1 class="mb-5">Leicester Schools</h1>
+            <h1 class="mb-5">Leicester Schools' Spend Per Pupil</h1>
             <div class="seperator"></div>
           </div>
         </div>
@@ -184,11 +163,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
-                    <article class="post">
-                         <div class="map-container">
-        <div id="map" class="map" >          
-        </div>
-    </div>                                            </article>
+                    <article class="post tableview">
+                                                
+                       <div class="row">
+                        <div class="subtitle col-md-6 col-xl-9">This is the official government data for Leicester school expenditure. It shows the spend per pupil for each school.</div>
+                        <div class="subtitle col-md-6 col-xl-3"></div>
+                        </div>
+                        
+                        <div id="schools-table"></div>
+                    </article>
                 </div>
             </div>
         </div>
@@ -398,8 +381,10 @@
     <script src="/js/jqBootstrapValidation.js"></script>
     <script src="/js/tutor_me.js"></script>
     <script src="/js/main.js"></script>
-                        <script src="/js/map-icons.js"></script>
-                    <script src="/js/place-schools.js"></script>
+                        <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-app.js"></script>
+                    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-database.js"></script>
+                    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.min.js"></script>
+                    <script src="/js/schools.js"></script>
              <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
     <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
     <script>

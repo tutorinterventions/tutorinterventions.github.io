@@ -1,4 +1,3 @@
-/*icons*/
 .features-icons {
   padding-top: 7rem;
   padding-bottom: 7rem;
@@ -14,4 +13,16 @@
 }
 .features-icons .features-icons-item:hover .features-icons-icon i {
   font-size: 5rem;
+}
+.showcase .showcase-text {
+  padding: 3rem;
+}
+.showcase .showcase-img {
+  min-height: 30rem;
+  background-size: cover;
+}
+@media (min-width: 768px) {
+  .showcase .showcase-text {
+    padding: 7rem;
+  }
 }
