@@ -323,6 +323,7 @@ header.masthead p {
   position: relative;
   background: #fff;
   padding: 40px;
+  height: 100%;
 }
 .ball-rolling .icon-box .icon {
   float: left;
@@ -337,14 +338,19 @@ header.masthead p {
   overflow: hidden;
   padding-left: 25px;
   text-align: left;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
+  height: 100%;
+}
+.ball-rolling .icon-box .content .btn {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 2em;
 }
 .ball-rolling .icon-box .content p {
   line-height: 24px;
 }
 .ball-rolling h4 {
-  font-size: 20px;
   margin-top: -6px;
   margin-bottom: 12px;
   font-weight: 300;
@@ -383,6 +389,9 @@ header.masthead p {
 .fees-list {
   text-align: left;
   margin-bottom: 30px;
+}
+.col-inner {
+  height: 100%;
 }
 /*page*/
 .page-header {
