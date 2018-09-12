@@ -55,8 +55,8 @@ header.masthead .overlay {
   opacity: 0.3;
 }
 header.masthead h1 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
 }
 header.masthead .contact-me {
   margin-bottom: 1em;
@@ -67,13 +67,40 @@ header.masthead .contact-me a {
 header.masthead p {
   color: #fff;
 }
+.intro-para {
+  overflow: hidden;
+  position: relative;
+}
+.intro-para ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.intro-para li {
+  float: left;
+  position: relative;
+  margin-bottom: 30px;
+}
+.notvis {
+  visibility: hidden;
+}
+.quote-author {
+  font-weight: bold;
+}
+.smaller {
+  font-size: 0.8em;
+}
+.contact-me {
+  position: relative;
+}
 @media (min-width: 768px) {
   header.masthead {
     padding-top: 9rem;
     padding-bottom: 3rem;
   }
   header.masthead h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 /*showcase*/
