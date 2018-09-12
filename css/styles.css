@@ -41,9 +41,9 @@ header.masthead {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-position-y: -4em;
   padding-top: 8rem;
   padding-bottom: 8rem;
-  height: 650px;
 }
 header.masthead .overlay {
   position: absolute;
@@ -56,6 +56,7 @@ header.masthead .overlay {
 }
 header.masthead h1 {
   font-size: 2rem;
+  margin-bottom: 1.5rem;
 }
 header.masthead .contact-me {
   margin-bottom: 1em;
@@ -68,11 +69,11 @@ header.masthead p {
 }
 @media (min-width: 768px) {
   header.masthead {
-    padding-top: 10rem;
-    padding-bottom: 12rem;
+    padding-top: 9rem;
+    padding-bottom: 3rem;
   }
   header.masthead h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 /*showcase*/
