@@ -9,7 +9,7 @@
 .social-media .sm-container {
   width: 150px;
   position: relative;
-  margin: 0 auto;
+  float: right;
 }
 @media (min-width: 768px) {
   .social-media {

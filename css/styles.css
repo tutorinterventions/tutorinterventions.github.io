@@ -286,6 +286,10 @@ header.masthead p {
 }
 .img-cont {
   margin-bottom: 2rem;
+  height: auto;
+}
+.img-cont.sml {
+  height: 70px;
 }
 .contact-details {
   font-size: 14px;
@@ -342,6 +346,17 @@ header.masthead p {
 .footer .bottom a {
   color: #fff;
   text-decoration: none;
+}
+@media (min-width: 768px) {
+  .widget img {
+    height: 100%;
+    width: auto;
+  }
+  .img-cont {
+    margin-bottom: 2rem;
+    height: 100px;
+    width: auto;
+  }
 }
 /*ball rolling*/
 .ball-rolling .icon-box {
