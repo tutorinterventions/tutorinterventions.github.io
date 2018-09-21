@@ -41,7 +41,6 @@ header.masthead {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-position-y: -4em;
   padding-top: 8rem;
   padding-bottom: 8rem;
 }
@@ -609,6 +608,9 @@ p {
   width: 100%;
   top: 0;
   left: 0;
+}
+.home-testimonial {
+  padding-top: 2em;
 }
 /*search*/
 .search-form {
