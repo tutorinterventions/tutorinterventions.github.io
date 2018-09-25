@@ -222,7 +222,7 @@
 <div id="contactForm" class="modal fade" role="dialog">
     <div class="modal-dialog">
         <!-- Modal content-->
-        <div class="modal-content">
+        <div class="modal-content bg-light">
             <div class="modal-header">
                 <h4 class="modal-title">
                     Request Rachael As A Tutor
@@ -231,30 +231,38 @@
             </div>
             <div class="modal-body">
                 <form role="form" method="post" id="request-tutor" >
-                    <p>Give me a brief idea of what you are looking for and I will get back to you very shortly</p>
+                    <p>Give me a brief idea of what you are looking for and I will get back to you very shortly. Hopefully later today.</p>
                         <div class="form-group">
                             <label for="name"> Name:</label>
-                            <input type="text" class="form-control" id="name" name="name" required maxlength="50">
+                            <input type="text" class="form-control" id="Name" name="Name" required maxlength="50">
                         </div>
                         <div class="form-group">
                             <label for="email"> Email:</label>
-                            <input type="email" class="form-control" id="email" name="email" required maxlength="50">
+                            <input type="email" class="form-control" id="Email" name="Email" required maxlength="50">
                         </div>
                         <div class="form-group">
                             <label for="phone">Phone :</label>
-                            <input type="phone" class="form-control" id="phone" name="phone" required maxlength="50">
+                            <input type="phone" class="form-control" id="Phone" name="Phone" required maxlength="50">
                         </div>
                         <div class="form-group">
-                            <label for="name"> Message:</label>
-                            <textarea class="form-control" type="textarea" name="message" id="message" placeholder="Things you might want to include here are:
+                            <label for="name"> Details:</label>
+                            <textarea class="form-control" type="textarea" name="Details" id="Details" 
+                            placeholder="Things you might want to include here are:
                                     The age of the student and their level or learning?
                                     Are you engaging a tutor for specific exams or for specific learning needs?
                                     Times and dates you would like to engage a tutor." maxlength="6000" rows="5"></textarea>
                         </div>
-                    <button type="submit" class="btn btn-lg btn-success btn-block" id="btnContactUs">Send Request &rarr;</button>
+                        <input type="hidden" id="Title" name="Title">
+                    <button type="submit" class="btn btn-lg btn-primary btn-blue" id="btnContactUs">Send Request &rarr;</button>
                 </form>
-                <div id="success_message" style="width:100%; height:100%; display:none; "> <h3>Sent your message successfully!</h3> </div>
-                <div id="error_message" style="width:100%; height:100%; display:none; "> <h3>Error</h3> Sorry there was an error sending your form. </div>
+                    <div id="success_message" class="alert alert-success" style="display:none;" role="alert"> 
+                        <h3 class="alert-heading">Sent your message successfully!</h3> 
+                        I should get back to you very soon. Hopefully today.
+                    </div>
+                  <div id="error_message" class="alert alert-danger" style="display:none;" role="alert">
+                    <h3 class="alert-heading">Apologies, there Was An Error Sending Your Message.</h3> 
+                        This is a technical problem on our side. You can email me at: rachael@tutorinterventions.co.uk or try again later on.
+                  </div>
             </div>
         </div>
     </div>

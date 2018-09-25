@@ -1064,3 +1064,22 @@ form {
     margin-left: -360px;
   }
 }
+#contactForm {
+  font-size: 0.8rem;
+  line-height: 1rem;
+}
+#contactForm p {
+  font-size: 0.8rem;
+  line-height: 1rem;
+  margin-bottom: 1rem;
+}
+#contactForm h3 {
+  font-size: 1.3rem;
+}
+.modal-header {
+  background-color: #011b3a;
+  color: #fff;
+}
+#contactForm .close {
+  color: #fff;
+}

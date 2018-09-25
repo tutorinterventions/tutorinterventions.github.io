@@ -1,8 +1,15 @@
 
 $(function () {
+    
+    $('#contactForm').on('hidden.bs.modal', function (e) {
+        $('form#request-tutor').show();
+        $('#success_message').hide();
+        $('#error_message').hide();
+    });
+    
     function after_form_submitted(data) {
-        if (data.result == 'success') {
-            $('form#reused_form').hide();
+        if (data.success) {
+            $('form#request-tutor').hide();
             $('#success_message').show();
             $('#error_message').hide();
         }
@@ -12,21 +19,21 @@ $(function () {
             jQuery.each(data.errors, function (key, val) {
                 $('#error_message ul').append('<li>' + key + ':' + val + '</li>');
             });
+            $('form#request-tutor').hide();
             $('#success_message').hide();
             $('#error_message').show();
 
-            //reverse the response on the button
-            $('button[type="button"]', $form).each(function () {
-                $btn = $(this);
-                label = $btn.prop('orig_label');
-                if (label) {
-                    $btn.prop('type', 'submit');
-                    $btn.text(label);
-                    $btn.prop('orig_label', '');
-                }
-            });
-
         }//else
+        //reverse the response on the button
+        $('button[type="button"]', $form).each(function () {
+            $btn = $(this);
+            label = $btn.prop('orig_label');
+            if (label) {
+                $btn.prop('type', 'submit');
+                $btn.text(label);
+                $btn.prop('orig_label', '');
+            }
+        });
     }
 
     $('#request-tutor').submit(function (e) {
@@ -41,35 +48,15 @@ $(function () {
             $btn.text('Sending ...');
         });
 
-        var subjects = $("input#subjects").val();
-        var location = $("input#location").val();
-        var fname = $("input#first-name").val();
-        var lname = $("input#last-name").val();
-        var email = $("input#email").val();
-        var phone = $("input#phone").val();
-        var message = $("textarea#message").val();
-        var freq = $("input[name='frequency']:checked").val();
-        var delivery = $("input[name='delivery']:checked").val();
-        var name =  fname + " " + lname;
-
+        var name = $form.find("#Name").val();
+        $form.find("#Title").val("Tutor Request from " + name + " via tutorinterventions.co.uk");
 
         $.ajax({
             url: "https://getsimpleform.com/messages/ajax?form_api_token=437c648741436f4156d4a081cbc1a2df",
             dataType: "jsonp",
-            //data: $form.serialize(),
-            data: {
-                "Title": "Tutor Request from "+name+"  in "+location+" via tutorinterventions.co.uk",
-                "Name": name,
-                "Subjects": subjects || "Not indicated",
-                "Location": location,
-                "Frequency": freq || "Not indicated",
-                "Delivery": delivery || "Not indicated",
-                "Details": message,
-                "Phone": phone,
-                "Email": email
-            },
+            data: $form.serialize(),
             success: after_form_submitted
-       });
+        });
 
     });
 });
