@@ -300,12 +300,14 @@ form {
   top: 45px;
   left: 50%;
   width: 540px;
+  max-height: 90%;
   z-index: 999;
   margin-left: -270px;
   border: 1px solid #e6e6e6;
   box-shadow: 5px 5px 4px 5px rgba(0, 0, 0, 0.2);
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
+  overflow-y: scroll;
 }
 .form-header {
   height: 30px;

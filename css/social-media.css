@@ -25,7 +25,10 @@
     margin: 0;
   }
 }
-.fa {
+.social-media {
+  /* Add a hover effect if you want */
+}
+.social-media .fa {
   padding: 10px;
   font-size: 25px;
   width: 45px;
@@ -34,8 +37,7 @@
   text-decoration: none;
   margin-bottom: 5px;
 }
-/* Add a hover effect if you want */
-.fa:hover {
+.social-media .fa:hover {
   color: white;
   text-decoration: none;
 }
