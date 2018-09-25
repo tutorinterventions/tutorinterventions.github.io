@@ -37,6 +37,8 @@ h2 {
 header.masthead {
   position: relative;
   background-color: #343a40;
+  background-repeat: no-repeat;
+  background-position: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -564,7 +566,8 @@ aside.post {
   margin-bottom: 34px;
   color: #011b3a;
 }
-.feature.bg-dark h2 {
+.feature.bg-dark h2,
+.feature.bg-dark p {
   color: #fff;
 }
 p {
@@ -598,8 +601,12 @@ p {
 }
 .advantages {
   background-image: url('/img/children-working-together.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  background-position-y: -60px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .section-overlay {
   position: absolute;
