@@ -122,7 +122,7 @@ form {
   text-decoration: none;
 }
 .map {
-  height: 482px;
+  height: 50%;
   position: relative;
   overflow: hidden;
 }
@@ -140,22 +140,37 @@ form {
 .map-container {
   position: relative;
   background: #fff;
+  height: 482px;
 }
 .map-container .map-contact {
   position: absolute;
-  top: 50%;
-  left: 5%;
-  margin-right: 15px;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  z-index: 5;
-  width: 448px;
-  padding: 47px 52px 50px 52px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 30px 10px 30px 10px;
   background: #fff;
+  z-index: 9999;
+}
+@media (min-width: 768px) {
+  .map {
+    height: 100%;
+  }
+  .map-container .map-contact {
+    left: 5%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 448px;
+    padding: 47px 52px 50px 52px;
+  }
 }
 .map-contact ul {
   list-style: none;
   padding-left: 40px;
+}
+.map-contact .socials-list {
+  text-align: center;
+  margin-left: -70px;
 }
 .map-contact li {
   margin-bottom: 15px;

@@ -2,7 +2,18 @@
 // Contact Form Scripts
 $(function() {
 
+    var me = [52.661, -1.154];
+    var mapCenter =  [52.661, -1.199];
+    if($(window).width() < 768){
+        mapCenter = me;
+    }
+    var map = L.map('map').setView(mapCenter, 13);
 
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    L.marker(me).addTo(map);
 
     $("body").on("input propertychange", ".floating-label-form-group", function(e) {
         $(this).toggleClass("floating-label-form-group-with-value", !!$(e.target).val());
