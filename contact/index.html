@@ -66,36 +66,6 @@
   gtag('config', 'UA-123302569-1');
 </script>
 
-    <script>
-        window.ti = window.ti || {};
-
-                
-        var centerLL =  {lat: 52.5694, lng: -1.1693};
-        var zoom = 14;
-        if(mapConfig) {
-            centerLL = mapConfig.center;
-            zoom = mapConfig.zoom;
-        }
-        function initMap() {
-            window.ti.map = new google.maps.Map(document.getElementById('map'), {
-            center: centerLL,
-            zoom: zoom,
-            scrollwheel: false
-            });
-            google.maps.event.addListenerOnce(map, 'tilesloaded', function(){
-                 $('.map-overlay').fadeOut(1000,function(){
-                    var marker = new google.maps.Marker({
-                        position: centerLL,
-                        map: map,
-                        animation: google.maps.Animation.DROP
-                    });
-                 })
-            });
-        }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFO-sbwaYY3QEZ5WtPmWg4XZVbOodk2U8&callback=initMap" async defer></script>
-
-
 <script>
   (function() {
     var cx = '013979487175649159810:5dmpygjru_a';
@@ -189,14 +159,19 @@
     </header>
         <div class="map-container">
         <div id="map" class="map" >
-        
-            
+            <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
+src="https://www.openstreetmap.org/export/embed.html?bbox=-1.2860870361328127%2C52.60158792933864%2C-1.0231018066406252%2C52.720490172853076&amp;layer=mapnik&amp;marker=52.661079482306896%2C-1.1545944213867188" 
+style="">
+</iframe><br/>
+<small>
+<a href="https://www.openstreetmap.org/?mlat=52.6611&amp;mlon=-1.1546#map=12/52.6611/-1.1546">View Larger Map</a>
+</small>           
         </div>
-         <div class="map-overlay"></div>
+         
         <div class="map-contact">
         <ul class="contact-list">
             <li class="address">
-            <i class="fa fa-globe"></i>Blaby, Leicester, LE8 4DH</li>
+            <i class="fa fa-globe"></i>Beaumont Leys, Leicester, LE4 0TB</li>
             <li class="tel"><a href="tel:0756 358 2702">
             <i class="fa fa-mobile"></i>0756 358 2702</a></li>
             <li class="skype"><a href="skype:tutorinterventions?chat">
@@ -326,7 +301,7 @@
             </div>
         </div>
         <div class="bottom">
-            Copyright © Tutor Interventions 2018| <a href="/terms-and-conditions/">Terms and Conditions</a> | <a href="/privacy-policy/">Privacy</a>
+            Copyright © Tutor Interventions 2019| <a href="/terms-and-conditions/">Terms and Conditions</a> | <a href="/privacy-policy/">Privacy</a>
         </div>
       </div>
     </footer>   
