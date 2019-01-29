@@ -7,7 +7,13 @@ $(function() {
     if($(window).width() < 768){
         mapCenter = me;
     }
-    var map = L.map('map').setView(mapCenter, 13);
+    var map = L.map('map',{
+        center: mapCenter,
+        zoom: 13,
+        zoomControl: false,
+        dragging: false,
+        scrollWheelZoom: false
+    });
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

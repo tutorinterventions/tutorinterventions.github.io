@@ -890,6 +890,7 @@ form {
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     width: 448px;
+    height: 300px;
     padding: 47px 52px 50px 52px;
   }
 }

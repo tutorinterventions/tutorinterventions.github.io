@@ -5,6 +5,7 @@
   background: transparent;
   text-align: center;
   width: 100%;
+  z-index: 999;
 }
 .social-media .sm-container {
   width: 150px;
