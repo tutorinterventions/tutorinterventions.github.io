@@ -156,6 +156,9 @@ header.masthead p {
 .testimonials-wrapper.fh .slick-slide {
   display: none;
 }
+.slick-dots li.slick-active button:before {
+  color: #fff;
+}
 /*call to action*/
 .call-to-action {
   position: relative;
