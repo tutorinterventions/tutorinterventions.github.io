@@ -22,7 +22,7 @@ $(function () {
         slidesToShow: 2,
         slidesToScroll: 2,
         autoplay: true,
-        autoplaySpeed: 30000,
+        autoplaySpeed: 15000,
         dots: true
     });
 
