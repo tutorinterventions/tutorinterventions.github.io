@@ -49,6 +49,8 @@
     <link href="/css/styles.css" rel="stylesheet">
     <link href="/css/request-form.css" rel="stylesheet">
     <link href="/css/social-media.css" rel="stylesheet">
+    <link href="/css/slick.css" rel="stylesheet">
+    <link href="/css/slick-theme.css" rel="stylesheet">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -158,15 +160,15 @@
         </div>
       </div>
     </header>
-    <div class="page-content gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <article class="post">
-                        <h2>Rachael's Welcome</h2>
-                        <div class="seperator left"></div>
-                                                    <img src="/img/rachael-avatar.jpg" alt="Rachael Dyer" class="img-left">
-                                                <p>Welcome to Tutor Interventions in Leicester. I’m Rachael Dyer and I set up Tutor Interventions to provide tutoring services for pupils in and around the Leicester area.</p>
+    <div class="page-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-7 col-sm-12">
+                 <article class="post">
+                    <h2>Rachael's Welcome</h2>
+                    <div class="seperator left"></div>
+                                            <img src="/img/rachael-avatar.jpg" alt="Rachael Dyer" class="img-left">
+                                        <p>Welcome to Tutor Interventions in Leicester. I’m Rachael Dyer and I set up Tutor Interventions to provide tutoring services for pupils in and around the Leicester area.</p>
 <p>I have over 20 years experience teaching children with varying levels of Special Needs, including, but not limited to:</p>
 <ul>
 <li>Attention Deficit Hyperactivity Disorder (ADHD)</li>
@@ -206,16 +208,7 @@
 <li>To manage their anxieties towards their learning</li>
 </ul>
 <p><strong>Rachael Dyer</strong>, Lead Tutor</p>
-                    </article>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div class="page-content">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-md-7 col-sm-12">
+                </article>
                 <article class="post bulleted">
                     <h2>Mission</h2>
                     <div class="seperator left"></div>
@@ -235,14 +228,20 @@
             <div class="col-lg-4 col-md-5 col-sm-12">
                 <aside class="post">
                     <div class="side-wrapper">
-                    <h3>Testimonials</h3>
+                                        <h3>Testimonials</h3>
                     <div class="seperator left"></div>
-                    <h4 id="dee-p">Dee P</h4>
-<p>This is my second lesson with Rachael. She is very professional and organised. In the hour she’s here they get a lot done. My son is also very happy being tutored by Rachael.</p>
-<h4 id="madison-j">Madison J</h4>
-<p>Great tutor committed to my daughter and able to manage her complex needs using different techniques and humour.
+                                                <h4>Arjun P</h4>
+                        <p>I would like to send a massive thank you to Rachael for teaching me how to answer key questions and what to understand and interpret from them. I used to struggle with English a lot, but thanks to Rachael’s help I’ve never felt more confident to answer any exam questions they throw at me. She teaches you in a way that you will always remembers and does not stop until you have fully understood it. </p>
+                                                <h4>Dee P</h4>
+                        <p>This is my second lesson with Rachael. She is very professional and organised. In the hour she’s here they get a lot done. My son is also very happy being tutored by Rachael.</p>
+                                                <h4>Elagiya S</h4>
+                        <p>Rachael is an amazing tutor who cares about her students&#39; progression. She spends her time finding extra resources and emails them,  which I found really helpful. Her technique of teaching is outstanding as it&#39;s easy to understand, she also takes her time explaining in detail things which I do not understand. Her way of teaching has made me improve and has led me to do well on my GCSEs. </p>
+                                                <h4>Madison J</h4>
+                        <p>Great tutor committed to my daughter and able to manage her complex needs using different techniques and humour.
 My daughter can be difficult to engage/encourage and has low self-esteem, with Rachael’s support she is learning and her confidence is growing and showing through already.</p>
-                    </div>
+                                                <h4>Ysolina A</h4>
+                        <p>Thank you so much for all your help and support with my son&#39;s preparation for the GCSE English Language and Literature. Your patience (with both of us!), flexibility, teaching style and subject knowledge were second to none. Despite all the challenges (and there were a few!) so much progress was made and my son again feels confident in his abilities once again. Thank you so much! </p>
+                                            </div>
                 </aside>
             </div>
         </div>
@@ -349,7 +348,9 @@ My daughter can be difficult to engage/encourage and has low self-esteem, with R
     <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="/js/jqBootstrapValidation.js"></script>
     <script src="/js/request-form.js"></script>
+    <script src="/js/slick.js"></script>
     <script src="/js/main.js"></script>
+
      <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
     <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
     <script>
@@ -368,7 +369,8 @@ My daughter can be difficult to engage/encourage and has low self-esteem, with R
     }
     })});
     </script>
-    <div class="social-media">
+    
+<div class="social-media">
 <div class="sm-container">
     <a href="javascript:void(0)" 
     onClick="window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.tutorinterventions.co.uk%2F%2Fabout%2F', 'facebook-share', 'width=580,height=296');return false;"
@@ -377,10 +379,6 @@ My daughter can be difficult to engage/encourage and has low self-esteem, with R
     <a href="javascript:void(0)" 
     onClick="window.open('https://twitter.com/intent/tweet?text=Welcome%20to%20Tutor%20Interventions%20in%20Leicester.%20I%E2%80%99m%20Rachael%20Dyer%20and%20I%20set%20up%20Tutor%20Interventions%20to%20provide%20tutoring%20services%20for%20pupils%20in%20and%20around%20the%20Leicester%20area.%20I%20have%20over%2020%20years%20experience%20teaching%20children%20with%20varying%20levels%20of%20Special%20Needs%2C%20including%2C%20but%20not%20limited%20to%3A%20%20Attention%20Deficit%20Hyperactivity%20Disorder%20...&#38;url=https%3A%2F%2Fwww.tutorinterventions.co.uk%2F%2Fabout%2F', 'twitter-share', 'width=550,height=235');return false;" 
      class="fa fa-twitter"  title="Share on Twitter">   
-    </a>
-    <a href="javascript:void(0)" 
-    onClick="window.open('https://plus.google.com/share?url=https%3A%2F%2Fwww.tutorinterventions.co.uk%2F%2Fabout%2F', 'google-plus-share', 'width=490,height=530');return false;"
-     class="fa fa-google"  title="Share on Google+">   
     </a>
     </div>
 </div></body>

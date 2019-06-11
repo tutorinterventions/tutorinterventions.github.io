@@ -10,3 +10,13 @@
   max-width: 12rem;
   box-shadow: 0px 5px 5px 0px #adb5bd;
 }
+.testimonials-wrapper p {
+  font-weight: 300!important;
+}
+.testimonials-wrapper.fh {
+  height: 280px;
+  overflow: hidden;
+}
+.testimonials-wrapper.fh .slick-slide {
+  display: none;
+}
